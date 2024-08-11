@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lindiwe Thabsile Dlomo's Personal Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('img/thavby.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+        header {
+            background-color: rgba(76, 175, 80, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(51, 51, 51, 0.8);
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+       
+
+        
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .portfolio-item {
+            flex: 1 1 calc(33.333% - 40px); /* Three items per row with spacing */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-item img {
+            width: 100%; /* Full width of the container */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .portfolio-item h3 {
+            margin: 15px 0 10px;
+            font-size: 1em;
+            text-align: center;
+            color: #333;
+        }
+        
+        .portfolio-item p {
+            text-align: center;
+            margin: 10px 0 20px;
+            color: #666;
+            font-size: 1em;
+        }
+        
+        .portfolio-item a {
+            padding: 10px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        
+        .portfolio-item a:hover {
+            background-color: #45a049;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .icons img {
+            width: 30px; /* Adjust the size of icons */
+            height: 30px;
+        }
+               
+
+
+.blog-post {
+            margin-bottom: 20px;
+        }
+        .blog-post h3 {
+            margin-top: 0;
+        }
+        .blog-post img {
+            max-width: 30%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+ .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+.skill {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(33% - 40px);
+    min-width: 250px;
+    text-align: center;
+}
+.skill h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Lindiwe Thabsile Dlomo's Personal Page</h1>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p><span>Hi!</span> I’m Lindiwe Thabsile Dlomo, a dedicated and innovative professional based in Johannesburg, South Africa. With a diverse background in web development, digital marketing, and technology, I’m passionate about creating impactful solutions that drive positive change.
+
+        I specialize in web development, utilizing HTML, CSS, and JavaScript to build responsive and engaging websites. My projects often incorporate modern frameworks and technologies to deliver optimal user experiences. In addition to web development, I have a strong foundation in Python programming, which I use for a variety of applications, including data analysis and automation. for backend, i am skilled in Node.js, Express.js and Django and for Database i have a SQL knowledge and have sharpened all these skills through my Year experience at SBV Services.
+        
+        My expertise extends to UI/UX design, where I focus on creating intuitive and visually appealing interfaces that enhance user satisfaction. I’m also skilled in Robotic Process Automation (RPA), using tools like UiPath to streamline repetitive tasks and improve operational efficiency. </p>
+        
+       <p> In the realm of digital marketing and SEO, I work to optimize web content, improve search engine rankings, and drive organic traffic which i have strengthened my skill with the Work-Readiness programme from ORT (SA). My approach involves strategic keyword research, compelling content creation, and detailed performance analysis.
+        
+        I am particularly passionate about making technology accessible to rural communities and schools. Through my startup, TechBridge Solutions, I aim to provide affordable tech support and development services to underserved areas, helping bridge the tech gap and foster digital literacy.
+        
+        Outside of work, I enjoy staying updated on the latest tech trends, exploring new tools and technologies, and continuously expanding my skill set. I believe in the power of technology to transform lives and am committed to leveraging my skills to contribute to meaningful projects and initiatives.</p>
+        
+        
+        
+       
+</section>
+
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-container">
+        <div class="portfolio-item">
+            <img src="img/Capture.JPG" alt="Resume Builder">
+            <h3><a href="https://lindiwedlomo.github.io/Resume_Builder/" target="_blank">Resume Builder</a></h3>
+            <div class="icons">
+                <img src="img/iconhtml.jpeg" alt="HTML Icon">
+                <img src="img/iconcss.jpeg" alt="CSS Icon">
+                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="img/DM.JPG" alt="Drum-Machine">
+            <h3><a href="https://fccdrum-machine.vercel.app/" target="_blank">Drum-Machine</a></h3>
+            <div class="icons">
+                <img src="img/OIP (2).jpeg" alt="Vite Icon">
+                <img src="img/R.png" alt="TypeScript Icon">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="img/vpn-use.JPG" alt="VPN">
+            <h3><a href="https://github.com/LindiweD-Collab/vpn--app" target="_blank">VPN App</a></h3>
+            <div class="icons">
+                <img src="img/python-(1).webp" alt="Python Icon">
+                <img src="img/flask.jpeg" alt="Flask Icon">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="img/PasswordG.JPG" alt="Resume Builder">
+            <h3><a href="https://password-generator-omega-silk.vercel.app/" target="_blank">Password Generator</a></h3>
+            <div class="icons">
+                <img src="img/iconhtml.jpeg" alt="HTML Icon">
+                <img src="img/iconcss.jpeg" alt="CSS Icon">
+                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="img/e-cormm.JPG" alt="Resume Builder">
+            <h3><a href="https://e-commerce-three-mu-25.vercel.app/" target="_blank">E-Commerce Store</a></h3>
+            <div class="icons">
+                <img src="img/iconhtml.jpeg" alt="HTML Icon">
+                <img src="img/iconcss.jpeg" alt="CSS Icon">
+                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="img/todo.JPG" alt="To-do">
+            <h3><a href="https://to-do-app-beryl-delta.vercel.app/" target="_blank">To-do app</a></h3>
+            <div class="icons">
+                <img src="img/iconhtml.jpeg" alt="HTML Icon">
+                <img src="img/iconcss.jpeg" alt="CSS Icon">
+                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="img/download.jpeg" alt="ChatBot">
+            <h3><a href="https://github.com/LindiweD-Collab/front-backend-integration" target="_blank">Frontend-Backend-Integration</a></h3>
+            <div class="icons">
+               <img src="img/react.jpeg" alt="React Icon">
+               <img src="img/flask.jpeg" alt="Flask Icon">
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="img/fr1.jpeg" alt="">
+            <h3><a href="https://github.com/LindiweD-Collab/face-recognition" target="_blank">AI  Face Recognition</a></h3>
+            <div class="icons">
+                <img src="img/python-(1).webp" alt="Python Icon">
+            </div>
+        </div>
+         <div class="portfolio-item">
+            <img src="img/pppp.JPG" alt="">
+            <h3><a href="https://codepen.io/Codepen-thaby/pen/ExGrYxx" target="_blank">Random Quote machine</a></h3>
+            <div class="icons">
+                <img src="img/pug.jpg" alt="pug Icon">
+               <img src="img/scss.jpeg" alt="scss Icon">
+               <img src="img/R.png" alt="TypeScript Icon">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill">
+            <h3>Web Development</h3>
+            <p>I have a strong foundation in web development, utilizing HTML, CSS, and JavaScript to create responsive and dynamic websites. My projects often involve modern frameworks and libraries to enhance user experiences.</p>
+        </div>
+        <div class="skill">
+            <h3>Python Programming</h3>
+            <p>With extensive experience in Python, I have developed a variety of applications, from web scraping tools to data analysis scripts. My Python expertise includes working with popular libraries like pandas, NumPy, and Flask.</p>
+        </div>
+        <div class="skill">
+            <h3>UI/UX Design</h3>
+            <p>Understanding the importance of user experience, I design intuitive and attractive interfaces. I employ best practices in UI/UX design to ensure that my applications are both functional and user-friendly.</p>
+        </div>
+        <div class="skill">
+            <h3>RPA (Robotic Process Automation)</h3>
+            <p>Specializing in RPA, I automate repetitive tasks to improve efficiency and accuracy. My skills include using UiPath and Microsoft Power Automate to develop robust automation solutions.</p>
+        </div>
+        <div class="skill">
+            <h3>SEO & Digital Marketing</h3>
+            <p>With a background in SEO and digital marketing, I optimize web content to improve search engine rankings and drive organic traffic. My strategies include keyword research, content creation, and performance analysis.</p>
+        </div>
+        <div class="skill">
+            <h3>Data Analysis & Visualization</h3>
+            <p>I have a knack for turning raw data into meaningful insights. Using tools like Python, Excel, and Tableau, I analyze data trends and create visualizations that inform business decisions.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+<h2>Links</h2>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/lindiwe-dlomo-b50050b8/" target="_blank">https://www.linkedin.com/in/lindiwe-dlomo-b50050b8/</a></p>
+<p>GitHub: 
+    <a href="https://github.com/LindiweD-Collab/" target="_blank">https://github.com/LindiweD-Collab/</a> 
+    <a href="https://github.com/LindiweDlomo/" target="_blank">https://github.com/LindiweDlomo/</a>
+</p>
+<p>Codepen: <a href="https://codepen.io/Codepen-thaby" target="_blank">https://codepen.io/Codepen-thaby</a></p>
+
+
+    <h2>Contact</h2>
+    <form action="mailto:lindiwethaby@hotmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-post">
+        <h3>Latest Trends in Artificial Intelligence</h3>
+        <img src="img/AI_in_2024.jpg" alt="Artificial Intelligence Trends">
+        <p>Artificial Intelligence (AI) continues to advance rapidly, with new developments in machine learning, natural language processing, and computer vision. Recent trends include the rise of AI ethics, AI-driven automation, and the integration of AI in healthcare, finance, and other industries.</p>
+    </div>
+    <div class="blog-post">
+        <h3>The Rise of Quantum Computing</h3>
+        <img src="img/R.jpeg" alt="Quantum Computing">
+        <p>Quantum computing is making significant strides, promising to revolutionize computing by solving complex problems faster than classical computers. Key developments include advancements in quantum hardware, algorithms, and applications in cryptography, materials science, and optimization problems.</p>
+    </div>
+    <div class="blog-post">
+        <h3>5G Technology and Its Impact</h3>
+        <img src="img/R (1).jpeg" alt="5G Technology">
+        <p>The rollout of 5G technology is transforming the telecommunications industry, offering faster data speeds, lower latency, and improved connectivity. This technology is enabling new applications such as IoT, smart cities, and enhanced mobile broadband experiences.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lindiwe Thabsile Dlomo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
