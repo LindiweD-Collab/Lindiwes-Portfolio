@@ -382,7 +382,7 @@
     border-radius: 8px;
     background-color: #4dbb53; 
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -697,10 +697,12 @@
 </section>
 
 <section id="download">
-    <h2>Download Resume</h2>
+    <h2>Find my Resume</h2>
     <div class="button-container">
         <button onclick="window.open('img/Resumee.pdf', '_blank');">View Resume</button>
-        <button onclick="window.location.href='img/Resumee.pdf';">Download Resume</button>
+        <a href="img/Resumee.pdf" download="Resumee.pdf">
+            <button>Download Resume</button>
+        </a>
     </div>
 </section>
 
