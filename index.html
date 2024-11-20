@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -230,6 +231,10 @@
 .blog-post {
             margin-bottom: 20px;
             color: rgb(224, 220, 214);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            
         }
         .blog-post h3 {
             margin-top: 0;
@@ -356,12 +361,6 @@
 
 
 .reference{
-    flex: 1 1 calc(33% - 40px); 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
     max-width: 250px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -369,7 +368,17 @@
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     color: #e6d9d9;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 
+}
+
+#references{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
 }
 
 .button-container button {
@@ -404,7 +413,7 @@
 } 
 
 #tech-stack {  
-            max-width: 800px;  
+            max-width: 1230px;  
             margin: auto;  
             padding: 20px;  
             background: white;  
@@ -500,7 +509,7 @@
             <img src="img/jsicon.jpeg" alt="Tech 2">  
         </div>  
         <div class="tech-item">  
-            <img src="img/iconcss.jpeg" alt="Tech 3">  
+            <img src="img/scss.jpeg" alt="Tech 3">  
         </div>  
         <div class="tech-item">  
             <img src="img/flask.jpeg" alt="Tech 4">  
@@ -509,10 +518,10 @@
             <img src="img/pug.jpg" alt="Tech 3">  
         </div>  
         <div class="tech-item">  
-            <img src="img/download.jpeg" alt="Tech 4">  
+            <img src="img/python_b.png" alt="Tech 4">  
         </div>  
         <div class="tech-item">  
-            <img src="img/download.png" alt="Tech 3">  
+            <img src="img/SQL.png" alt="Tech 3">  
         </div>  
         <div class="tech-item">  
             <img src="img/react.jpeg" alt="Tech 4">  
@@ -520,10 +529,7 @@
         <div class="tech-item">  
             <img src="img/R.png" alt="Tech 4">  
         </div> 
-        <div class="tech-item">  
-            <img src="img/OIP (2).jpeg" alt="Tech 4">  
-        </div>
-        
+         
     </div>  
 </section>
 
@@ -623,7 +629,7 @@
      <div>
          <h3>Google Data Analytics Professional Certificate</h3>
          <p> Gained comprehensive training in data analytics, including data cleaning, analysis, visualization, and using tools like SQL, R, and spreadsheets. It equipped me with the skills needed to analyze and interpret data effectively, preparing them for roles in data analytics.</p>
-         <button onclick="window.location.href='img/Coursera WHJ8W407PFO8.pdf';">View Certificate</button>
+         <button onclick="window.open('img/Coursera WHJ8W407PFO8.pdf');">View Certificate</button>
       </div>
     </div>    
 
@@ -632,7 +638,7 @@
       <div>
           <h3>Google Business Intelligence Professional Certificate</h3>
           <p>This certification focuses on the principles and practices of business intelligence, covering data modeling, reporting, and the use of BI tools to transform data into actionable insights. It enhances decision-making processes through data-driven strategies and comprehensive analysis techniques.</p>
-          <button onclick="window.location.href='img/Coursera G43VHDDCE7G5 BI.pdf';">View Certificate</button>
+          <button onclick="window.open('img/Coursera G43VHDDCE7G5 BI.pdf');">View Certificate</button>
        </div>
           
    </div>
@@ -677,7 +683,7 @@
         <div>
             <h3>Web Development Certificate</h3>
             <p>Completed a comprehensive web development course, focusing on front-end technologies.</p>
-            <button onclick="window.location.href='img/solo learn.pdf';">View Certificate</button>
+            <button onclick="window.open('img/solo learn.pdf');">View Certificate</button>
         </div>
     </div>
 
@@ -688,7 +694,8 @@
             
             <h3>AWS Intro to Containers</h3>
             <p>A foundational course that provides an understanding of container technologies, including Docker and Kubernetes, on AWS. It covers the basics of deploying, managing, and scaling containerized applications in the cloud.</p>
-            <button onclick="window.location.href='img/AWS Course Completion Certificate.pdf';">View Certificate</button>
+            <button onclick="window.open('img/AWS Course Completion Certificate.pdf');">View Certificate</button>
+            
         </div>
     </div>
 
@@ -698,7 +705,7 @@
             
             <h3>SEO Specialist Certificate</h3>
             <p>Certified in search engine optimization techniques and strategies to enhance website visibility. Earned through a work readiness programme at ORT SA</p>
-            <button onclick="window.location.href='img/AWS Course Completion Certificate.pdf';">View Certificate</button>
+            <button onclick="window.open('img/ORT.pdf');">View Certificate</button>
         </div>
     </div>
     <div class="certification">
@@ -707,7 +714,7 @@
             
             <h3>AWS Solutions Architect Job Simulation Certificate</h3>
             <p>Certified in AWS Solutions Architecture techniques and strategies, This certification validates the ability to design, deploy, and operate scalable, highly available, and fault-tolerant systems on AWS. </p>
-            <button onclick="window.location.href='img/AWS Solutions Architect Cert.pdf';">View Certificate</button>
+            <button onclick="window.open('img/AWS Solutions Architect Cert.pdf');">View Certificate</button>
         </div>
     </div>
     <div class="certification">
@@ -716,10 +723,50 @@
             
             <h3>Accenture Data Analyst Job Simulation Certificate</h3>
             <p>Certified in Data Analytics techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
-            <button onclick="window.location.href='img/Data Analytics Accenture Cert.pdf';">View Certificate</button>
+            <button onclick="window.open('img/Data Analytics Accenture Cert.pdf');">View Certificate</button>
         </div>
     </div>
     
+    <div class="certification">
+        <img src="img/Standard_Bank.jpg" alt="Degree Image">
+        <div>
+            
+            <h3>Standardbank Software Engineering Job Simulation Certificate</h3>
+            <p> This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience, i have finished these below tasks,
+                 Token-Based Authentication,
+                 Encoding Faces Within Images,
+                 Data Management and Querying,
+                 Creating Personalised Views</p>
+            <button onclick="window.open('img/standardbank.pdf');">View Certificate</button>
+        </div>
+    </div>
+    <div class="certification">
+        <img src="img/tata.png" alt="Degree Image">
+        <div>
+            
+            <h3>Tata Cybersecurity Analyst Job Simulation Certificate</h3>
+            <p>Certified in Cybersecurity techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
+            <button onclick="window.open('img/Tataa.pdf');">View Certificate</button>
+        </div>
+    </div>
+    <div class="certification">
+        <img src="img/_1511791350_327_pwc-preview.jpg" alt="Degree Image">
+        <div>
+            
+            <h3>PwC Management Consulting Job Simulation Certificate</h3>
+            <p>Certified in Data Analytics techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
+            <button onclick="window.open('img/pwcc.pdf');">View Certificate</button>
+        </div>
+    </div>
+    <div class="certification">
+        <img src="img/Acce.png" alt="Degree Image">
+        <div>
+            
+            <h3>Accenture Project Management Job Simulation Certificate</h3>
+            <p>Certified in Data Analytics techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
+            <button onclick="window.open('img/accenture pm.pdf');">View Certificate</button>
+        </div>
+    </div>
     </div>
 </section>
 
@@ -787,7 +834,6 @@
     <h2>Find My Resume</h2>
     <div class="button-container">
         <button onclick="window.open('img/Resume1.pdf', '_blank');">View Resume</button>
-        <button onclick="window.location.href='img/Resume1.pdf';">Download Resume</button>
     </div>
 </section>
 
