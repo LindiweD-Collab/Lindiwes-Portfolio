@@ -1,908 +1,1066 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('img/thavby.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-        }
-        header {
-            background-color: #9e391a;
-            color: rgb(224, 220, 214);
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(51, 51, 51, 0.8);
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #4e4242;
-            color: black;
-        }
-        section {
-            background-color: rgba(117, 113, 113, 0.8);
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: rgba(51, 51, 51, 0.8);
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        button {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
+    <meta name="description" content="Lindiwe Dlomo - Innovative Full Stack Developer creating modern web experiences with React, Node.js, and cloud technologies. Explore my portfolio of cutting-edge projects.">
+    <title>Lindiwe T. Dlomo | Full Stack Developer | Data Analist</title>
+
+    <!-- Mobile responsiveness tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         
-        #about {
-        font-family:Georgia, 'Times New Roman', Times, serif; 
-        text-align: center; 
-        padding: 20px;
-        
-    }
-
-    .about-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; 
-    }
-
-    .about-text {
-        max-width: 950px;
-        color: rgb(224, 220, 214);
-    }
-
-    .about-image img {
-        width: 200px; 
-        height: 200px;
-        border-radius: 50%; 
-        object-fit: cover; 
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-    }
-
-    .dynamic-title {
-        font-weight: bold;
-        color: #a3106b; 
-        transition: color 0.3s ease; 
-    }
-
-    @keyframes title-change {
-       
-        34%, 66% {
-            content: "Software Developer";
-            color: #e48c0a;
-        }
-        67%, 100% {
-            content: "Web Developer";
-            color: #32cd32;
-        }
-        100%, 133% {
-            content: "Data Analyst";
-            color: #30caa4;
-        }
-    }
-
-    .dynamic-title::after {
-        content: "Data Analyst";
-        animation: title-change 6s infinite; 
-    }
-        
-    section {
-        background-color: rgba(49, 44, 44, 0.8);
-        margin: 20px;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #f3f4f6;
-    color: #666;
-    }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-bottom: 5px;
-            color: rgb(224, 220, 214);
-        }
-        input, textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-       
-
-        
-        .portfolio-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 20px;
-        }
-        
-        .portfolio-item {
-            flex: 1 1 calc(33.333% - 40px); 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(216, 208, 208, 0.2);
-        }
-        
-        .portfolio-item h3 {
-            margin: 15px 0 10px;
-            font-size: 0.7em;
-            text-align: center;
-            color: rgb(224, 220, 214);
-        }
-        
-       
-        
-        .portfolio-item a {
-            padding: 10px 10px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            font-size: 1em;
-            font-weight: bold;
-        }
-        
-        .portfolio-item a:hover {
-            background-color: #45a049;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        
-        .icons {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .icons img {
-            width: 30px; 
-            height: 30px;
-        }
-               
-
-
-.blog-post {
-            margin-bottom: 20px;
-            color: rgb(224, 220, 214);
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            
-        }
-        .blog-post h3 {
-            margin-top: 0;
-            color: rgb(124, 84, 23);
-        }
-        .blog-post img {
-            max-width: 30%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .icons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .icons img {
-            width: 30px;
-            height: 30px;
-        }
-
- .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-}
-.skill {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: calc(33% - 40px);
-    min-width: 250px;
-    text-align: center;
-}
-.skill h3 {
-    margin-top: 0;
-    color: #4CAF50;
-}
-
-    .education {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .education img {
-        width: 100px; 
-        height: auto; 
-        margin-right: 15px; 
-    }
-
-    .education h3 {
-        margin: 0; 
-        font-size: 1.2em; 
-        color: rgb(158, 128, 83);
-    }
-
-    .education p {
-        margin: 5px 0 0; 
-        font-size: 1em; 
-        color: rgb(224, 220, 214);
-    }
-    .certification {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin-bottom: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        background-color: #f9f9f9; 
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-    }
-
-    .certification img {
-        width: 80px; 
-        height: 80px;
-        border-radius: 50%; 
-        object-fit: cover; 
-    }
-
-    .certification h3 {
-        margin: 0;
-        font-size: 1.2em;
-        color: #333;
-    }
-
-    .certification p {
-        margin: 5px 0;
-        color: #555;
-    }
-
-    .certification button {
-        padding: 8px 16px;
-        border: none;
-        border-radius: 4px;
-        background-color: #4CAF50; 
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .certification button:hover {
-        background-color: #45a049; 
-    }
-
-    #download {
-        text-align: center; 
-        padding: 50px 0; 
-        background-color: #504a4a; 
-    }
-
-    #download h2 {
-        font-size: 1em;
-        margin-bottom: 20px;
-        color: #e2dcdc;
-    }
-
-    .button-container {
-    display: flex;
-    justify-content: center; 
-    gap: 10px;
-}
-
-
-.reference{
-    max-width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #e6d9d9;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-
-}
-
-#references{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-}
-
-.button-container button {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4dbb53; 
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.button-container button:hover {
-    background-color: #4dbb53; 
-    transform: scale(1.05); 
-}
-
-.social-icons {  
-    margin-top: 20px; 
-}  
-
-.social-icons a {  
-    margin: 0 10px; 
-    color: #000; 
-    font-size: 24px;  
-    text-decoration: none;  
-}  
-
-.social-icons a:hover {  
-    color: #007bff; 
-} 
-
-#tech-stack {  
-            max-width: 1230px;  
-            margin: auto;  
-            padding: 20px;  
-            background: white;  
-            border-radius: 8px;  
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
-        }  
-
-.tech-container  {  
-    display: flex;  
-    justify-content: center;  
-    flex-wrap: wrap;  
-    margin: 20px 0;  
-}  
-
-.tech-item {  
-    margin: 10px;  
-    opacity: 0;  
-    transform: translateY(50px);  
-    transition: opacity 0.5s ease, transform 0.5s ease;  
-}  
-
-.tech-item img {  
-    width: 100px;   
-    height: auto;  
-    border-radius: 10px;   
-}  
-
-.tech-item:hover {  
-    transform: scale(1.1);  
-}  
-
-.tech-item.show {  
-    opacity: 1; 
-    transform: translateY(0);   
-}  
-
- 
-@keyframes fadeIn {  
-    0% {  
-        opacity: 0;   
-        transform: translateY(20px);  
-    }  
-    100% {  
-        opacity: 1;   
-        transform: translateY(0);  
-    }  
-}
-
-</style>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" as="font" crossorigin>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/main.css">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0f172a">
 </head>
-<body>
-
-
-
-<nav>
-     
-         
-        
-    <a href="#about">About Me</a>
-    <a href="#tech-stack">Tech Stack</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#education">Education</a>
-    <a href="#references">References</a>
-    <a href="#contact">Contact</a>
-    <a href="#blog">Blog</a>
-       
-    
-</nav>
-
-<section id="about">
-    
-    <div class="about-container">
-        <div class="about-text">
-            <p>Hi! I’m Lindiwe Thabsile Dlomo, an innovative <span class="dynamic-title"></span> based in Johannesburg, South Africa. I’m passionate about harnessing technology to solve real-world challenges and drive meaningful change.</p>  
-<p>I am a Junior Software Developer with hands-on experience in Python and Robotic Process Automation (RPA). I thrive on developing efficient solutions and enhancing workflows through automation, always aiming to make processes smarter and more streamlined. My curiosity and enthusiasm for learning fuel my journey in the tech world. I’m excited to connect with like-minded individuals and contribute to projects that make a difference.</p>  
-
- 
-</div>
-        <div class="about-image">
-            <img src="img/thavby.jpg" alt="About Me Image">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="loading-spinner">
+                <div class="spinner-sector spinner-sector-purple"></div>
+                <div class="spinner-sector spinner-sector-blue"></div>
+                <div class="spinner-sector spinner-sector-pink"></div>
+            </div>
+            <div class="preloader-text">Loading Innovation...</div>
         </div>
     </div>
-</section>
-<section id="tech-stack">  
-    <h2>Tech Stack</h2>  
-    <div class="tech-container">  
-        <div class="tech-item">  
-            <img src="img/iconhtml.jpeg" alt="Tech 1">  
-        </div>  
-        <div class="tech-item">  
-            <img src="img/jsicon.jpeg" alt="Tech 2">  
-        </div>  
-        <div class="tech-item">  
-            <img src="img/scss.jpeg" alt="Tech 3">  
-        </div>  
-        <div class="tech-item">  
-            <img src="img/flask.jpeg" alt="Tech 4">  
-        </div>  
-        <div class="tech-item">  
-            <img src="img/pug.jpg" alt="Tech 3">  
-        </div>  
-        <div class="tech-item">  
-            <img src="img/java.png" alt="Tech 4">  
-        </div>  
-        <div class="tech-item">  
-            <img src="img/SQL.png" alt="Tech 3">  
-        </div>  
-        <div class="tech-item">  
-            <img src="img/react.jpeg" alt="Tech 4">  
-        </div> 
-        <div class="tech-item">  
-            <img src="img/R.png" alt="Tech 4">  
-        </div> 
-         
-    </div>  
-</section>
 
-<section id="portfolio">
+    <!-- Floating Particles Background -->
+    <div id="particles-js"></div>
     
-    <div class="portfolio-container">
-        <div class="portfolio-item">
-            <img src="img/Capture.JPG" alt="Resume Builder">
-            <h3><a href="https://lindiwedlomo.github.io/Resume_Builder/" target="_blank">Resume Builder</a></h3>
-            <div class="icons">
-                <img src="img/iconhtml.jpeg" alt="HTML Icon">
-                <img src="img/iconcss.jpeg" alt="CSS Icon">
-                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="logo-icon">LT</span>
+                <span class="logo-text">Lindiwe Thabsile Dlomo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="assets/resume.pdf" class="btn-resume" download="Lindiwe_Dlomo_Resume.pdf">
+                            Resume <i class="fas fa-download"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="portfolio-item">
-            <img src="img/DM.JPG" alt="Drum-Machine">
-            <h3><a href="https://fccdrum-machine.vercel.app/" target="_blank">Drum-Machine</a></h3>
-            <div class="icons">
-                <img src="img/OIP (2).jpeg" alt="Vite Icon">
-                <img src="img/R.png" alt="TypeScript Icon">
+    </nav>
+
+    <!-- Hero Section with Enhanced Structure -->
+<!-- Update your hero section with this structure -->
+<section id="hero" class="hero-section">
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>Full Stack Developer | Data Analyst</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="wave-emoji">👋</span> Hi, I'm <span class="text-gradient">Lindiwe Thabsile Dlomo</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        An innovative Junior Software Developer that <span class="typing-text"></span>
+                    </h2>
+                    <p class="hero-description">
+                        I'm based in Johannesburg, South Africa. I’m passionate about harnessing technology to solve real-world challenges and drive meaningful change.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary" id="viewWorkBtn">
+                            View My Work <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline" id="connectBtn">
+                            Let's Connect <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/LindiweD-Collab" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/lindiwe-dlomo-b50050b8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@renicmash" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/+27711398624" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 position-relative">
+                <div class="hero-image-wrapper">
+                    <div class="profile-image-container">
+                        <img src="img/sthombe2 (3).jpg" alt="Nicolette Mashaba" class="profile-image">
+                        <div class="profile-glow"></div>
+                        <div class="tech-icons">
+                            <!-- Your tech icons here -->
+                            <div class="tech-icons">
+                                <div class="icon react" data-tooltip="React">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                                </div>
+                                <div class="icon node" data-tooltip="Node.js">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                                </div>
+                                <div class="icon js" data-tooltip="JavaScript">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                                </div>
+                                <div class="icon azure" data-tooltip="Azure">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                                </div>
+                                <div class="icon typescript" data-tooltip="TypeScript">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                                </div>
+                                <div class="icon mongodb" data-tooltip="MongoDB">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <!-- Animated scroll indicator -->
+    <div class="scroll-indicator">
+        <a href="#about" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
+    </div>
+</section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-5 about-image-col">
+                    <div class="about-image-wrapper">
+                        <img src="img/thavby.jpg" alt="Nicolette Mashaba" class="about-image">
+                        <div class="about-image-bg"></div>
+                        <div class="about-experience">
+                            <div class="exp-number">2+</div>
+                            <div class="exp-text">Years of<br>Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 about-content">
+                    <h3>Who am I?</h3>
+                    <p>
+                        I'm Lindiwe Thabsile Dlomo, a passionate <strong>Full Stack Developer</strong> based in Johannesburg, South Africa. I’m passionate about harnessing technology to solve real-world challenges and drive meaningful change.
+                    </p>
+                    
+                    <div class="about-tabs">
+                        <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-tab-pane" type="button">
+                                    <i class="fas fa-code"></i> Skills
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button">
+                                    <i class="fas fa-graduation-cap"></i> Education
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="hobbies-tab" data-bs-toggle="tab" data-bs-target="#hobbies-tab-pane" type="button">
+                                    <i class="fas fa-heart"></i> Interests
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="aboutTabsContent">
+                            <div class="tab-pane fade show active" id="skills-tab-pane" role="tabpanel">
+                                <div class="skills-list">
+                                    <div class="skill-item">
+                                        <div class="skill-name">Frontend Development</div>
+                                        <div class="skill-level">
+                                            <div class="level-bar" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">Backend Development</div>
+                                        <div class="skill-level">
+                                            <div class="level-bar" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">UI/UX Design</div>
+                                        <div class="skill-level">
+                                            <div class="level-bar" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-name">Data Analysis</div>
+                                        <div class="skill-level">
+                                            <div class="level-bar" style="width: 70%"></div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="education-tab-pane" role="tabpanel">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2025</div>
+                                        <div class="timeline-content">
+                                            <h4>Web Development Bootcamp</h4>
+                                            <p>Umuzi</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2024 - 2026(On Going)</div>
+                                        <div class="timeline-content">
+                                            <h4>NQF Level 7 (Bsc in Computer Science)</h4>
+                                            <p>International University of Applied Sciences</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2023 - 2024</div>
+                                        <div class="timeline-content">
+                                            <h4>Software Developer Internship(YES Certification)</h4>
+                                            <p>YES4Youth Program</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2021 -On going</div>
+                                        <div class="timeline-content">
+                                            <h4>Responsive Web Development</h4>
+                                            <p>Solo Learn/ FreeCodeCamp/ Udemy</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="hobbies-tab-pane" role="tabpanel">
+                                <div class="hobbies-grid">
+                                    <div class="hobby-item">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <span>Coding</span>
+                                    </div>
+                                    <div class="hobby-item">
+                                        <i class="fas fa-book"></i>
+                                        <span>Reading</span>
+                                    </div>
+                                    <div class="hobby-item">
+                                        <i class="fas fa-music"></i>
+                                        <span>Music</span>
+                                    </div>
+                                    <div class="hobby-item">
+                                        <i class="fas fa-plane"></i>
+                                        <span>Travel</span>
+                                    </div>
+                                    <div class="hobby-item">
+                                        <i class="fas fa-gamepad"></i>
+                                        <span>Drawing</span>
+                                    </div>
+                                    <div class="hobby-item">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Photography</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary me-3">Hire Me</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="portfolio-item">
-            <img src="img/vpn-use.JPG" alt="VPN">
-            <h3><a href="https://github.com/LindiweD-Collab/vpn--app" target="_blank">VPN App</a></h3>
-            <div class="icons">
-                <img src="img/python-(1).webp" alt="Python Icon">
-                <img src="img/flask.jpeg" alt="Flask Icon">
-            </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">What I'm great at</span>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="divider"></div>
         </div>
-        <div class="portfolio-item">
-            <img src="img/PasswordG.JPG" alt="Resume Builder">
-            <h3><a href="https://password-generator-omega-silk.vercel.app/" target="_blank">Password Generator</a></h3>
-            <div class="icons">
-                <img src="img/iconhtml.jpeg" alt="HTML Icon">
-                <img src="img/iconcss.jpeg" alt="CSS Icon">
-                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <img src="img/e-cormm.JPG" alt="Resume Builder">
-            <h3><a href="https://e-commerce-three-mu-25.vercel.app/" target="_blank">E-Commerce Store</a></h3>
-            <div class="icons">
-                <img src="img/iconhtml.jpeg" alt="HTML Icon">
-                <img src="img/iconcss.jpeg" alt="CSS Icon">
-                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
-         </div>
-        </div>
-        <div class="portfolio-item">
-            <img src="img/todo.JPG" alt="To-do">
-            <h3><a href="https://to-do-app-beryl-delta.vercel.app/" target="_blank">To-do app</a></h3>
-            <div class="icons">
-                <img src="img/iconhtml.jpeg" alt="HTML Icon">
-                <img src="img/iconcss.jpeg" alt="CSS Icon">
-                <img src="img/jsicon.jpeg" alt="JavaScript Icon">
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <img src="img/download.jpeg" alt="ChatBot">
-            <h3><a href="https://github.com/LindiweD-Collab/front-backend-integration" target="_blank">Frontend-Backend-Integration</a></h3>
-            <div class="icons">
-               <img src="img/react.jpeg" alt="React Icon">
-               <img src="img/flask.jpeg" alt="Flask Icon">
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <img src="img/fr1.jpeg" alt="">
-            <h3><a href="https://github.com/LindiweD-Collab/face-recognition" target="_blank">AI  Face Recognition</a></h3>
-            <div class="icons">
-                <img src="img/python-(1).webp" alt="Python Icon">
-            </div>
-        </div>
-         <div class="portfolio-item">
-            <img src="img/pppp.JPG" alt="">
-            <h3><a href="https://codepen.io/Codepen-thaby/pen/ExGrYxx" target="_blank">Random Quote machine</a></h3>
-            <div class="icons">
-                <img src="img/pug.jpg" alt="pug Icon">
-               <img src="img/scss.jpeg" alt="scss Icon">
-               <img src="img/R.png" alt="TypeScript Icon">
+        
+        <div class="skills-tabs">
+            <ul class="nav nav-pills mb-5" id="skillsTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="frontend-tab" data-bs-toggle="pill" data-bs-target="#frontend" type="button">
+                        <i class="fas fa-laptop-code"></i> Frontend
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="backend-tab" data-bs-toggle="pill" data-bs-target="#backend" type="button">
+                        <i class="fas fa-server"></i> Backend
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="frontend-tab" data-bs-toggle="pill" data-bs-target="#frontend" type="button">
+                        <i class="fa-solid fa-database"></i> Database
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="learning-tab" data-bs-toggle="pill" data-bs-target="#learning" type="button">
+                        <i class="fas fa-rocket"></i> Learning
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="skillsTabContent">
+                <!-- Frontend Skills -->
+                <div class="tab-pane fade show active" id="frontend" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>React.js</h4>
+                                    <p>Building interactive UIs with React hooks, context API, and Redux</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>JavaScript (ES6+)</h4>
+                                    <p>Modern JavaScript with functional programming concepts</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>TypeScript</h4>
+                                    <p>Type-safe JavaScript development for scalable applications</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Tailwind CSS</h4>
+                                    <p>Utility-first CSS framework for rapid UI development</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="tab-pane fade" id="backend" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Node.js</h4>
+                                    <p>Building scalable server-side applications with Express.js</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>MongoDB</h4>
+                                    <p>NoSQL database design and implementation</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>PostgreSQL</h4>
+                                    <p>Relational database management and query optimization</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" alt="GraphQL">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>GraphQL</h4>
+                                    <p>Building efficient APIs with Apollo Server</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools -->
+                <div class="tab-pane fade" id="tools" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Git & GitHub</h4>
+                                    <p>Version control and collaborative development</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Docker</h4>
+                                    <p>Containerization and deployment workflows</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Figma</h4>
+                                    <p>UI/UX design and prototyping</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>VS Code</h4>
+                                    <p>Primary code editor with extensive extensions</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Currently Learning -->
+                <div class="tab-pane fade" id="learning" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Google Cloud</h4>
+                                    <p>Google Data Engineer</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar learning" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Microsoft Azure</h4>
+                                    <p>Cloud infrastructure and services on Microsoft's platform</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar learning" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Kubernetes</h4>
+                                    <p>Container orchestration and deployment</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar learning" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Python</h4>
+                                    <p>Scripting and backend development</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar learning" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="education">
-    
-    <div class="education">
-        <img src="img/degree.jpeg" alt="Degree Image">
-        <div>
-            <h3>Bachelor of Science in Computer Science</h3>
-            <p> Recently accepted an offer from IU to study towards completion of a 3 year degree Computer Science Program</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My recent work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="divider"></div>
+                <p class="section-description">
+                    Here are some of my recent projects. Each one was built to solve specific problems
+                    and showcase different aspects of my technical skills.
+                </p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="design">UI/UX</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="img/Capture.JPG" alt="RealHomes Project">
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" aria-label="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Resume Builder</h3>
+                        <p>A comprehensive real estate platform with property listings, agent profiles, and advanced search functionality.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Mapbox</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline">Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="img/DM.JPG" alt="CTU Buddy Project">
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" aria-label="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Drum Machine</h3>
+                        <p>Student collaboration platform with study groups, resource sharing, and event scheduling.</p>
+                        <div class="project-tech">
+                            <span>Vite.js</span>
+                            <span>Express</span>
+                            <span>JavaScript</span>
+                            <span>TailwindCSS</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline">Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="img/eventA.png" alt="Weather App Project">
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" aria-label="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Data Analyzer</h3>
+                        <p>Interactive weather application with real-time data, forecasts, and location-based services.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Chart.js</span>
+                            <span>OpenWeather API</span>
+                            <span>Geolocation</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline">Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="img/techy.png" alt="Portfolio Design">
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" aria-label="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FAQ ChatApp</h3>
+                        <p>Custom design system with reusable components, animations, and responsive layouts.</p>
+                        <div class="project-tech">
+                            <span>Flask</span>
+                            <span>Storybook</span>
+                            <span>CSS Variables</span>
+                            <span>GSAP</span>
+                        </div>
+                        <a href="https://faq-chatbot-9nq1.onrender.com/" class="btn btn-sm btn-outline">Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="https://github.com/LindiweD-Collab" target="_blank" class="btn btn-primary">
+                    View More on GitHub <i class="fab fa-github"></i>
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="education">
-     <img src="img/google DT.jpeg" alt="Degree Image">
-     <div>
-         <h3>Google Data Analytics Professional Certificate</h3>
-         <p> Gained comprehensive training in data analytics, including data cleaning, analysis, visualization, and using tools like SQL, R, and spreadsheets. It equipped me with the skills needed to analyze and interpret data effectively, preparing them for roles in data analytics.</p>
-         <button onclick="window.open('img/Coursera WHJ8W407PFO8.pdf');">View Certificate</button>
-      </div>
-    </div>    
+    </section>
 
-    <div class="education">
-      <img src="img/google BI.jpeg" alt="Degree Image">
-      <div>
-          <h3>Google Business Intelligence Professional Certificate</h3>
-          <p>This certification focuses on the principles and practices of business intelligence, covering data modeling, reporting, and the use of BI tools to transform data into actionable insights. It enhances decision-making processes through data-driven strategies and comprehensive analysis techniques.</p>
-          <button onclick="window.open('img/Coursera G43VHDDCE7G5 BI.pdf');">View Certificate</button>
-       </div>
-          
-   </div>
-</section>    
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My journey so far</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Web Developer Recruit</h3>
+                            <span class="timeline-company">Umuzi</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Developed and deployed 10+ web applications for clients across various industries</li>
+                            <li>Implemented responsive designs and optimized performance for better user experience</li>
+                            <li>Collaborated with designers and other developers to deliver high-quality products</li>
+                            <li>Integrated third-party APIs and payment gateways for e-commerce solutions</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 - AI Trainer -->
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2023 - May 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Software Developer Intern</h3>
+                            <span class="timeline-company">SBV Services</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Trained and fine-tuned AI models for natural language processing tasks</li>
+                            <li>Developed training datasets and evaluated model performance</li>
+                            <li>Collaborated with data scientists to improve AI model accuracy</li>
+                            <li>Created documentation and training materials for AI systems</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>Machine Learning</span>
+                            <span>Data Annotation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 - Navy -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>SEO Special & AD Administrator</h3>
+                            <span class="timeline-company">ORT SA</span>
+                        </div>
+                        <ul class="timeline-description">
+                            <li>Assisted in navigation and operation of naval vessels</li>
+                            <li>Monitored and maintained navigational equipment and systems</li>
+                            <li>Participated in maritime operations and exercises</li>
+                            <li>Maintained logs and records of navigation activities</li>
+                            <li>Assisted in watchkeeping and bridge operations</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Navigation</span>
+                            <span>Maritime Operations</span>
+                            <span>Team Leadership</span>
+                            <span>Safety Procedures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="skills">
-    
-    <div class="skills-container">
-        <div class="skill">
-            <h3>Web Development</h3>
-            <p>I have a strong foundation in web development, utilizing HTML, CSS, and JavaScript to create responsive and dynamic websites. My projects often involve modern frameworks and libraries to enhance user experiences.</p>
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What people say</span>
+                <h2 class="section-title">Client Testimonials</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="splide" id="testimonialSlider">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <!-- Testimonial 1 -->
+                        <div class="splide__slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p>
+                                        Lindiwe delivered an exceptional web application that exceeded our expectations. 
+                                        Her attention to detail and problem-solving skills were impressive. 
+                                        She communicated clearly throughout the project and delivered on time.
+                                    </p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <img src="img/tony.jpeg" alt="Client" class="author-image">
+                                    <div class="author-info">
+                                        <h4>Tony Broodryk</h4>
+                                        <span>Head: Information Technology Operations</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="splide__slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p>
+                                        Working with Lindiwe was a pleasure. She transformed our outdated website 
+                                        into a modern, user-friendly platform that has significantly increased our 
+                                        online engagement and conversions.
+                                    </p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <img src="img/kgomoto.jpeg" alt="Client" class="author-image">
+                                    <div class="author-info">
+                                        <h4>Kgomotso Mokwena</h4>
+                                        <span>Software Developer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="splide__slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <p>
+                                        Lindiwe's technical expertise and creative approach solved complex 
+                                        challenges in our project. She was responsive to feedback and went above 
+                                        and beyond to ensure the final product met all requirements.
+                                    </p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <img src="img/sudhir.jpeg" alt="Client" class="author-image">
+                                    <div class="author-info">
+                                        <h4>Sudhir Maharaj</h4>
+                                        <span>Head of Technology Service Delivery, SBV South Africa</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="skill">
-            <h3>Python Programming</h3>
-            <p>With extensive experience in Python, I have developed a variety of applications, from web scraping tools to data analysis scripts. My Python expertise includes working with popular libraries like pandas, NumPy, and Flask.</p>
-        </div>
-        <div class="skill">
-            <h3>UI/UX Design</h3>
-            <p>Understanding the importance of user experience, I design intuitive and attractive interfaces. I employ best practices in UI/UX design to ensure that my applications are both functional and user-friendly.</p>
-        </div>
-        <div class="skill">
-            <h3>RPA (Robotic Process Automation)</h3>
-            <p>Specializing in RPA, I automate repetitive tasks to improve efficiency and accuracy. My skills include using UiPath and Microsoft Power Automate to develop robust automation solutions.</p>
-        </div>
-        <div class="skill">
-            <h3>SEO & Digital Marketing</h3>
-            <p>With a background in SEO and digital marketing, I optimize web content to improve search engine rankings and drive organic traffic. My strategies include keyword research, content creation, and performance analysis.</p>
-        </div>
-        <div class="skill">
-            <h3>Data Analysis & Visualization</h3>
-            <p>I have a knack for turning raw data into meaningful insights. Using tools like Python, Excel, and Tableau, I analyze data trends and create visualizations that inform business decisions.</p>
-        </div>
-    </div>
-</section>
-    
+    </section>
 
-<section id="certifications">
-    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Get in touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="divider"></div>
+                <p class="section-description">
+                    Have a project in mind or want to discuss potential opportunities? 
+                    Feel free to reach out - I'd love to hear from you!
+                </p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-5 contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:nene171408@gmail.com">lindiwe@linkedme.co.za</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <span>Johannerburg, South Africa</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+1234567890">+27 76 109 7412</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/LindiweD-Collab" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lindiwe-dlomo-b50050b8/" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@renicmash" target="_blank" aria-label="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://wa.me/+27711398624" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7 contact-form">
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                <div class="invalid-feedback">Please enter your name</div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                <div class="invalid-feedback">Please enter a valid email</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                            <div class="invalid-feedback">Please enter a subject</div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <div class="invalid-feedback">Please enter your message</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="certification">
-        <img src="img/SOLO.jpg" alt="Degree Image">
-        <div>
-            <h3>Web Development Certificate</h3>
-            <p>Completed a comprehensive web development course, focusing on front-end technologies.</p>
-            <button onclick="window.open('img/solo learn.pdf');">View Certificate</button>
-        </div>
-    </div>
-
-
-    <div class="certification">
-        <img src="img/aws..png" alt="Degree Image">
-        <div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">NM</a>
+                    <p>Innovative Full Stack Developer creating digital experiences that matter.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="assets/resume.pdf" download>Download Resume</a></li>
+                            <li><a href="https://github.com/LindiweD-Collab" target="_blank">GitHub</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/lindiwe-dlomo-b50050b8/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://www.tiktok.com/@renicmash" target="_blank">TikTok</a></li>
+                            <li><a href="https://www.instagram.com/reney_717" target="_blank">Instagram</a></li>
+                            <li><a href="https://github.com/LindiweD-Collab" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             
-            <h3>AWS Intro to Containers</h3>
-            <p>A foundational course that provides an understanding of container technologies, including Docker and Kubernetes, on AWS. It covers the basics of deploying, managing, and scaling containerized applications in the cloud.</p>
-            <button onclick="window.open('img/AWS Course Completion Certificate.pdf');">View Certificate</button>
-            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="year"></span> Lindiwe Thabsile Dlomo. All rights reserved.
+                </div>
+                <div class="footer-credits">
+                    Made with <i class="fas fa-heart"></i> and <i class="fas fa-code"></i> in South Africa
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="certification">
-        <img src="img/ORT.png" alt="Degree Image">
-        <div>
-            
-            <h3>SEO Specialist Certificate</h3>
-            <p>Certified in search engine optimization techniques and strategies to enhance website visibility. Earned through a work readiness programme at ORT SA</p>
-            <button onclick="window.open('img/ORT.pdf');">View Certificate</button>
-        </div>
-    </div>
-    <div class="certification">
-        <img src="img/aws..png" alt="Degree Image">
-        <div>
-            
-            <h3>AWS Solutions Architect Job Simulation Certificate</h3>
-            <p>Certified in AWS Solutions Architecture techniques and strategies, This certification validates the ability to design, deploy, and operate scalable, highly available, and fault-tolerant systems on AWS. </p>
-            <button onclick="window.open('img/AWS Solutions Architect Cert.pdf');">View Certificate</button>
-        </div>
-    </div>
-    <div class="certification">
-        <img src="img/Acce.png" alt="Degree Image">
-        <div>
-            
-            <h3>Accenture Data Analyst Job Simulation Certificate</h3>
-            <p>Certified in Data Analytics techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
-            <button onclick="window.open('img/Data Analytics Accenture Cert.pdf');">View Certificate</button>
-        </div>
-    </div>
-    
-    <div class="certification">
-        <img src="img/Standard_Bank.jpg" alt="Degree Image">
-        <div>
-            
-            <h3>Standardbank Software Engineering Job Simulation Certificate</h3>
-            <p> This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience, i have finished these below tasks,
-                 Token-Based Authentication,
-                 Encoding Faces Within Images,
-                 Data Management and Querying,
-                 Creating Personalised Views</p>
-            <button onclick="window.open('img/standardbank.pdf');">View Certificate</button>
-        </div>
-    </div>
-    <div class="certification">
-        <img src="img/tata.png" alt="Degree Image">
-        <div>
-            
-            <h3>Tata Cybersecurity Analyst Job Simulation Certificate</h3>
-            <p>Certified in Cybersecurity techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
-            <button onclick="window.open('img/Tataa.pdf');">View Certificate</button>
-        </div>
-    </div>
-    <div class="certification">
-        <img src="img/_1511791350_327_pwc-preview.jpg" alt="Degree Image">
-        <div>
-            
-            <h3>PwC Management Consulting Job Simulation Certificate</h3>
-            <p>Certified in Data Analytics techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
-            <button onclick="window.open('img/pwcc.pdf');">View Certificate</button>
-        </div>
-    </div>
-    <div class="certification">
-        <img src="img/Acce.png" alt="Degree Image">
-        <div>
-            
-            <h3>Accenture Project Management Job Simulation Certificate</h3>
-            <p>Certified in Data Analytics techniques and strategies. This certification demonstrates proficiency in applying data analytics techniques to solve business challenges. It includes hands-on experience in data visualization, predictive modeling, and interpreting data-driven insights to support decision-making processes.</p>
-            <button onclick="window.open('img/accenture pm.pdf');">View Certificate</button>
-        </div>
-    </div>
-    </div>
-</section>
-
-<section id="references">
-    
-    <div class="reference">
-        <img src="img/1693370684030.jpeg" alt="Reference Image" style="width: 100px; height: auto;">
-        <div>
-            <h3>Vasan Naidu</h3>
-            <p>Head of Technology at SBV Services. Email: vasan@sbv.co.za</p>
-        </div>
-    </div>
-    <div class="reference">
-        <img src="img/c74f4590af7a8dca5e19749f1b8e1364 (1).png" alt="Reference Image" style="width: 100px; height: auto;">
-        <div>
-            <h3>Lucky Mashigoane</h3>
-            <p>Senior Developer at SBV Services. Email: luckymas@sbv.co.za</p>
-        </div>
-    </div>
-    
-    </div>
-    <div class="reference">
-        <img src="img/kgomoto.jpeg" alt="Reference Image">
-        <div>
-            <h3>Kgomotso Mokoena</h3>
-            <p>Software Developer at SBV Services Email: mokoenak@sbv.co.za</p>
-        </div>
-    </div>
-</section>
-<section id="contact"> 
-    
-    <div class="social-icons">  
-        <a href="https://github.com/LindiweD-Collab" target="_blank" aria-label="GitHub">  
-            <i class="fab fa-github"></i>  
-        </a>  
-        <a href="https://www.linkedin.com/in/lindiwe-dlomo-b50050b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">  
-            <i class="fab fa-linkedin"></i>  
-        </a>  
-        <a href="https://wa.me/+27711398624" target="_blank" aria-label="WhatsApp">  
-            <i class="fab fa-whatsapp"></i>  
-        </a>  
-        <a href="tel:+27711398624" aria-label="Cell Phone">  
-            <i class="fas fa-phone"></i>  
-        </a>  
-    </div>  
-    <form action= "mailto: lindiwethaby@hotmail.com">  
-        <label for="name">Name:</label>  
-        <input type="text" id="name" required>  
         
-        <label for="email">Email:</label>  
-        <input type="email" id="email" required>  
-        
-        <label for="message">Message:</label>  
-        <textarea id="message" required></textarea>  
-        
-        <button type="submit" value ="Send">Send Message</button>  
-    </form>  
+        <!-- Back to Top Button -->
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
 
-    
-</section>
-
-
-
-<section id="download">
-    <h2>Find My Resume</h2>
-    <div class="button-container">
-        <button onclick="window.open('img/Resume1.pdf', '_blank');">View Resume</button>
-    </div>
-</section>
-
-
-<section id="blog">
-    
-    <div class="blog-post">
-        <h3>Latest Trends in Artificial Intelligence</h3>
-        <img src="img/AI_in_2024.jpg" alt="Artificial Intelligence Trends">
-        <p>Artificial Intelligence (AI) continues to advance rapidly, with new developments in machine learning, natural language processing, and computer vision. Recent trends include the rise of AI ethics, AI-driven automation, and the integration of AI in healthcare, finance, and other industries.</p>
-    </div>
-    <div class="blog-post">
-        <h3>The Rise of Quantum Computing</h3>
-        <img src="img/R.jpeg" alt="Quantum Computing">
-        <p>Quantum computing is making significant strides, promising to revolutionize computing by solving complex problems faster than classical computers. Key developments include advancements in quantum hardware, algorithms, and applications in cryptography, materials science, and optimization problems.</p>
-    </div>
-    <div class="blog-post">
-        <h3>5G Technology and Its Impact</h3>
-        <img src="img/R (1).jpeg" alt="5G Technology">
-        <p>The rollout of 5G technology is transforming the telecommunications industry, offering faster data speeds, lower latency, and improved connectivity. This technology is enabling new applications such as IoT, smart cities, and enhanced mobile broadband experiences.</p>
-    </div>
-</section>
-
-<script>  
-     
-
-    document.addEventListener('DOMContentLoaded', () => {  
-        const techItems = document.querySelectorAll('#tech-stack .tech-item');  
-
-         
-        function isInViewport(element) {  
-            const rect = element.getBoundingClientRect();  
-            return (  
-                rect.top >= 0 &&  
-                rect.left >= 0 &&  
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&  
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)  
-            );  
-        }  
-
-        
-        function handleScroll() {  
-            techItems.forEach(item => {  
-                if (isInViewport(item)) {  
-                    item.classList.add('show');  
-                }  
-            });  
-        }  
-
-        
-        techItems.forEach((item, index) => {  
-            setTimeout(() => {  
-                if (isInViewport(item)) {  
-                    item.classList.add('show'); 
-                }  
-            }, index * 300); 
-        });  
-
-        
-        handleScroll();  
-
-        
-        window.addEventListener('scroll', handleScroll);  
-    });  
-</script>  
-
-
-
+ <!-- JavaScript Libraries -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+ <script src="src/main.js"></script>
 </body>
 </html>
-
-      
