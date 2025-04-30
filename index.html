@@ -378,16 +378,16 @@
                     <div>
                         <h3 class="sub-section-title"><i class="fas fa-certificate"></i> Professional Certifications</h3>
                         <ul class="certification-list">
-                            <li>Google Data Analytics <a href="certs/Coursera WHJ8W407PFO8.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
-                            <li>Google Business Intelligence <a href="certs/Coursera G43VHDDCE7G5 BI.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
-                            <li>Web Development Certificate <a href="certs/solo learn.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
+                            <li>Google Data Analytics <a href="certs/CourseraWHJ8W407PFO8.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
+                            <li>Google Business Intelligence <a href="certs/CourseraG43VHDDCE7G5 BI.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
+                            <li>Web Development Certificate <a href="certs/sololearn.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
                             <li>SEO Specialist (ORT SA) <a href="#" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
                             <li>Google Cloud Data Engineer Certificate <a href="certs/" target="_blank" rel="noopener noreferrer" class="cert-link">[Exam Scheduled]</a></li>
                          </ul>
                          <h3 class="sub-section-title mt-6"><i class="fas fa-laptop-code"></i> Job Simulations Completed</h3>
                          <ul class="certification-list sim-list">
-                            <li>AWS Solutions Architect <a href="certs/AWS Solutions Architect Cert.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
-                            <li>Accenture Data Analyst <a href="certs/Data Analytics Accenture Cert.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
+                            <li>AWS Solutions Architect <a href="certs/AWSSolutionsArchitectCert.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
+                            <li>Accenture Data Analyst <a href="certs/DataAnalyticsAccentureCert.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
                             <li>Standard Bank Software Engineering <a href="certs/standardbank.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
                             <li>PwC Management Consulting <a href="certs/PwC_SimCert.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
                             <li>Accenture Project Management <a href="certs/ProjectManagement_SimCert.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">[View]</a></li>
@@ -433,38 +433,48 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-section section-padding snap-start">
-            <div class="container">
-                <h2 class="section-title text-center">Get In Touch</h2>
-                <div class="contact-content grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="contact-info">
-                        <p>Interested in collaborating or have a question? Feel free to reach out!</p>
-                        <p>Connect with me via the form or through my professional channels:</p>
-                        <div class="contact-links">
-                             <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/lindiwe-dlomo-b50050b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-                             <p><i class="fab fa-github"></i> <a href="https://github.com/LindiweD-Collab" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-                             <p><i class="fas fa-envelope"></i> <a href="mailto:lindiwe@linkedme.co.za">lindiwe@linkedme.co.za</a></p>
-                             <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
-                        </div>
-                    </div>
-                    <form action= "mailto: lindiwe@linkedme.co.za" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+       <section id="contact" class="contact-section section-padding snap-start">
+  <div class="container mx-auto px-4">
+    <h2 class="section-title text-center text-3xl font-bold mb-8">Get In Touch</h2>
+    <div class="contact-content grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+      <div class="contact-info">
+        <p>Interested in collaborating or have a question? Feel free to reach out!</p>
+        <p>Connect with me via the form or through my professional channels:</p>
+        <div class="contact-links mt-4 space-y-2">
+          <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/lindiwe-dlomo-b50050b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+          <p><i class="fab fa-github"></i> <a href="https://github.com/LindiweD-Collab" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:lindiwe@linkedme.co.za">lindiwe@linkedme.co.za</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
+        </div>
+      </div>
+        
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="bg-white p-8 rounded shadow-md space-y-4">
+        <input type="hidden" name="access_key" value="e79fd123-332f-4645-b01b-ab2083a37bb9">
+        <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="subject" value="New message from contact form">
+
+        <div class="form-group">
+          <label for="name" class="block font-medium">Name:</label>
+          <input type="text" id="name" name="name" required class="w-full p-2 border rounded" />
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="block font-medium">Email:</label>
+          <input type="email" id="email" name="email" required class="w-full p-2 border rounded" />
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="block font-medium">Message:</label>
+          <textarea id="message" name="message" rows="5" required class="w-full p-2 border rounded"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <footer class="footer bg-dark">
